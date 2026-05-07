@@ -37,7 +37,7 @@ public class SinglyLinkedListTest {
 
         Assertions.assertIterableEquals(List.of(1,2,3,4),s);
 
-        int v = s.get(2);
+        int v = s.get(-1);
         System.out.println(v);
 
         s.insert(0,5);
