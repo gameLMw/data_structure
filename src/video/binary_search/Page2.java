@@ -1,15 +1,15 @@
 package video.binary_search;
 
 /*
-* 二分查找（第二版）
-* */
+ * 二分查找（第二版）
+ * */
 
 import org.junit.jupiter.api.Test;
 
 public class Page2 {
     @Test
     public void test() {
-        int[] arr = {1, 2, 3,4,5,6,7,8,9,10
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 //                ,11,12,13,14,15,16,17,18,19,20
 //                ,21,22,23,24,25,26,27,28,29,30
 //                ,31,32,33,34,35,36,37,38,39,40
@@ -20,11 +20,11 @@ public class Page2 {
 //                ,81,82,83,84,85,86,87,88,89,90
 //                ,91,92,93,94,95,96,97,98,99,100
         };
-        int i=binarySearch(arr, 5);
+        int i = binarySearch(arr, 5);
         System.out.println(i);
     }
 
-    public static int  binarySearch(int[] arr, int target) {
+    public static int binarySearch(int[] arr, int target) {
         //arr为要查找的数组，target为要查找的数
         int left = 0;
         int right = arr.length;
@@ -36,15 +36,15 @@ public class Page2 {
 
             int m = (left + right) / 2;
             if (arr[m] == target) {
-                System.out.println("num:"+num);
+                System.out.println("num:" + num);
                 return m;
-            }else if (target > arr[m]){
+            } else if (target > arr[m]) {
                 left = m + 1;
-            }else if (target <arr[m]){
-                right =m;
+            } else if (target < arr[m]) {
+                right = m;
             }
         }
-        System.out.println("num:"+num);
+        System.out.println("num:" + num);
         return -1;
     }
 }
