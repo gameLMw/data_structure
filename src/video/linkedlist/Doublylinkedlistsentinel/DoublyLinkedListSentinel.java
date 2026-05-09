@@ -113,14 +113,14 @@ public class DoublyLinkedListSentinel implements Iterable<Integer> {
             @Override
             public boolean hasNext() {
                 return p != tail;
-            }
+            }//是否有下一个元素
 
             @Override
             public Integer next() {
                 int value = p.value;
                 p = p.next;
                 return value;
-            }
+            }//返回当前元素，并指向下一个元素
         };
     }
 }
