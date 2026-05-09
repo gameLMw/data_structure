@@ -72,6 +72,18 @@ public class SinglyLinkedList implements Iterable<Integer> {
 
     //遍历链表方法4
     //递归遍历
+    public void loop3() {
+        recursion(head.next);
+    }
+
+    private void recursion(Node curr) {
+        if (curr == null) {
+            return;
+        }
+        System.out.println("before:" + curr.value);
+        recursion(curr.next);
+        System.out.println("after:" + curr.value);
+    }
 
     //查找末尾元素
     private Node findLast() {
@@ -151,7 +163,7 @@ public class SinglyLinkedList implements Iterable<Integer> {
 
     //删除指定位置的元素
     //index: 索引
-    public void remove(int  index) {
+    public void remove(int index) {
 //        if (index == 0) {
 //            removeFist();
 //            return;
@@ -161,7 +173,7 @@ public class SinglyLinkedList implements Iterable<Integer> {
             throw illegalIndex(index);
         }
         Node removed = prev.next;//获取删除的节点
-        if (removed == null){
+        if (removed == null) {
             throw illegalIndex(index);
         }
         prev.next = removed.next;
