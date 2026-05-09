@@ -52,4 +52,15 @@ public class SinglyLinkedListTest {
             System.out.println(value);
         }
     }
+
+    @Test
+    public void test3() {
+        SinglyLinkedList s = new SinglyLinkedList();
+        s.addLast(1);
+        s.addLast(2);
+        s.addLast(3);
+        s.addLast(4);
+
+        s.loop3();
+    }
 }
