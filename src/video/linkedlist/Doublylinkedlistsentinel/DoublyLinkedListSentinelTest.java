@@ -33,4 +33,24 @@ public class DoublyLinkedListSentinelTest {
             System.out.println(value);
         }
     }
+
+    @Test
+    public void test3() {
+        DoublyLinkedListSentinel d2 = null;
+        DoublyLinkedListSentinel d1 = new DoublyLinkedListSentinel();
+        d1.addLast(1);
+        d1.addLast(2);
+        d1.addLast(3);
+        d1.addLast(4);
+
+        d2 = d1;
+        for (Integer value : d2) {
+            System.out.println(value);
+        }
+        System.out.println("---------------");
+        d2.removeLast();
+        for (Integer value : d1) {
+            System.out.println(value);
+        }
+    }
 }
