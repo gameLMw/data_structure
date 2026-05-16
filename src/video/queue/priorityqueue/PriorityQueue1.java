@@ -2,8 +2,8 @@ package video.queue.priorityqueue;
 
 /*
  * 无序数组实现优先级队列
- * 插入时：直接添加到数组末尾 → O(1)
- * 删除/查看时：遍历数组找到最大优先级元素 → O(n)
+ * 插入时：直接添加到数组末尾：O(1)
+ * 删除/查看时：遍历数组找到最大优先级元素：O(n)
  * */
 
 import video.queue.Queue;
