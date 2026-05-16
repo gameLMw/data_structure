@@ -4,9 +4,10 @@ package video.queue.linkedlistqueue;
  * 链表实现队列
  * */
 
-import java.util.Collection;
+import video.queue.Queue;
+
 import java.util.Iterator;
-import java.util.Queue;
+
 
 public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
 
@@ -36,41 +37,6 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
     public LinkedListQueue() {
     }
 
-    @Override
-    public boolean add(E e) {
-        return false;
-    }
-
-    @Override
-    public boolean remove(Object o) {
-        return false;
-    }
-
-    @Override
-    public boolean containsAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean addAll(Collection<? extends E> c) {
-        return false;
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
-        return false;
-    }
-
-    @Override
-    public void clear() {
-
-    }
-
     // 入队
     //e: 入队元素
     @Override
@@ -83,11 +49,6 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
         tail = added;
         size++;
         return true;
-    }
-
-    @Override
-    public E remove() {
-        return null;
     }
 
     // 出队
@@ -106,11 +67,6 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
         return (E) first.value;
     }
 
-    @Override
-    public E element() {
-        return null;
-    }
-
     //返回第一个元素
     @Override
     public E peek() {
@@ -118,12 +74,6 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
             return null;
         }
         return (E) head.next.value;
-    }
-
-    //返回队列长度
-    @Override
-    public int size() {
-        return size;
     }
 
     // 判断队列是否为空
@@ -136,11 +86,6 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
 //        return p.next ==  tail;
 
         return size == 0;
-    }
-
-    @Override
-    public boolean contains(Object o) {
-        return false;
     }
 
     @Override
@@ -162,16 +107,6 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E> {
                 return value;
             }
         };
-    }
-
-    @Override
-    public Object[] toArray() {
-        return new Object[0];
-    }
-
-    @Override
-    public <T> T[] toArray(T[] a) {
-        return null;
     }
 
     // 判断队列是否已满
