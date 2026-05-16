@@ -2,8 +2,8 @@ package video.queue.priorityqueue;
 
 /*
  * 有序数组实现优先级队列
- * 插入时：找到合适位置插入，保持数组有序 → O(n)
- * 删除/查看时：直接取数组首或尾元素 → O(1)
+ * 插入时：找到合适位置插入，保持数组有：O(n)
+ * 删除/查看时：直接取数组首或尾元素：O(1)
  * */
 
 import video.queue.Queue;
